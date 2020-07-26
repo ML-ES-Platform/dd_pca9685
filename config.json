@@ -1,0 +1,45 @@
+{
+    "Components": {
+        "dd_pca9685": {
+            "Name": "dd_pca9685",
+            "git": "https://github.com/ML-ES-Platform/dd_pca9685.git",
+            "Path": "ESW/dd_pca9685/",
+            "Groups": {
+                "dd_pca9685": {
+                    "Name": "dd_pca9685",
+                    "NameSpace": "dd_pca9685",
+                    "Multiplicity": "0-*",
+                    "Push": [
+                        "PCA9685_WriteChannel"
+                    ],
+                    "Pull": [],
+                    "Dependencies": [
+                        "dd_pca9685"
+                    ],
+                    "Channels": {
+                        "Multiplicity": "1-16",
+                        "NameSpace": "PCA9685_PWM"
+                    },
+                    "Defines": {
+                        "PCA9685_PWM_FREQ": 50
+                    }
+                },
+                "dd_pca9685_pin": {
+                    "Name": "dd_pca9685_pin",
+                    "NameSpace": "dd_pca9685_pin",
+                    "Multiplicity": "1",
+                    "Push": [],
+                    "Pull": [],
+                    "Dependencies": [
+                        "dd_pca9685"
+                    ],
+                    "Channels": {
+                        "Multiplicity": "16",
+                        "NameSpace": "PCA9685_PIN"
+                    },
+                    "Defines": {}
+                }
+            }
+        }
+    }
+}
