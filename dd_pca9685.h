@@ -11,13 +11,11 @@
 
 #include "dd_pca9685_cfg.h"
 
-enum PCA9685_PinType {PCA9685_PIN_1,PCA9685_PIN_2, PCA9685_PIN_3, PCA9685_PIN_NR_OF};
-
-
 #ifndef DD_PCA9685_CONFIG
-enum DD_PCA9685_IdType { PCA9685_CHANNEL_NR_OF = 0};
+enum DD_PCA9685_Cnl_IdType { PCA9685_CHANNEL_NR_OF = 0};
 #endif
 
+enum PCA9685_PinType {PCA9685_PIN_1,PCA9685_PIN_2, PCA9685_PIN_3, PCA9685_PIN_CHANNEL_NR_OF};
 
 typedef struct PCA9685_ChannelType_t{
 	uint8_t pwm_pin;
